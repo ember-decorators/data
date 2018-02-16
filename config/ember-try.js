@@ -1,4 +1,3 @@
-/* eslint-env node */
 const getChannelURL = require('ember-source-channel-url');
 
 module.exports = function() {
@@ -58,15 +57,19 @@ module.exports = function() {
           name: 'ember-lts-2.4',
           bower: {
             dependencies: {
-              'ember': 'components/ember#lts-2-4'
+              'ember': 'components/ember#lts-2-4',
+              'ember-cli-shims': '0.1.0'
             },
             resolutions: {
-              'ember': 'lts-2-4'
+              'ember': 'lts-2-4',
+              'ember-cli-shims': '0.1.0'
             }
           },
           npm: {
             devDependencies: {
-              'ember-source': null
+              'ember-source': null,
+              'ember-data': '~2.4.0',
+              'ember-cli-shims': null
             }
           }
         },
@@ -82,7 +85,8 @@ module.exports = function() {
           },
           npm: {
             devDependencies: {
-              'ember-source': null
+              'ember-source': null,
+              'ember-data': '~2.8.0'
             }
           }
         },
@@ -90,7 +94,8 @@ module.exports = function() {
           name: 'ember-lts-2.12',
           npm: {
             devDependencies: {
-              'ember-source': '~2.12.0'
+              'ember-source': '~2.12.0',
+              'ember-data': '~2.12.0'
             }
           }
         },
@@ -98,7 +103,17 @@ module.exports = function() {
           name: 'ember-lts-2.16',
           npm: {
             devDependencies: {
-              'ember-source': '~2.16.0'
+              'ember-source': '~2.16.0',
+              'ember-data': '~2.16.0'
+            }
+          }
+        },
+        {
+          name: 'ember-lts-2.18',
+          npm: {
+            devDependencies: {
+              'ember-source': '~2.18.0',
+              'ember-data': '~2.18.0'
             }
           }
         },
@@ -106,7 +121,8 @@ module.exports = function() {
           name: 'ember-release',
           npm: {
             devDependencies: {
-              'ember-source': urls[0]
+              'ember-source': urls[0],
+              'ember-data': 'emberjs/data#release'
             }
           }
         },
@@ -114,7 +130,8 @@ module.exports = function() {
           name: 'ember-beta',
           npm: {
             devDependencies: {
-              'ember-source': urls[1]
+              'ember-source': urls[1],
+              'ember-data': 'emberjs/data#beta'
             }
           }
         },
@@ -122,7 +139,8 @@ module.exports = function() {
           name: 'ember-canary',
           npm: {
             devDependencies: {
-              'ember-source': urls[2]
+              'ember-source': urls[2],
+              'ember-data': 'emberjs/data#master'
             }
           }
         },
